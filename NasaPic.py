@@ -4,8 +4,8 @@ from PIL import Image
 from io import BytesIO
 #Key
 api_key = "rxftxUweV1AsYTBoh0RTQ4gIH7iOcAUQCy8XZgsc"
-rover = "curiosity"
-sol = 1000  # Martian sol (day)
+rover = "curiosity" #Changeable to Spirit or Opportunity rovers
+sol = 1000  #Martian sol (day), changeable to any day
 
 #API endpoint
 url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/{rover}/photos?sol={sol}&api_key={api_key}"
@@ -17,7 +17,7 @@ response = requests.get(url)
 if response.ok:
     photos = response.json()["photos"]
     print(f"Found {len(photos)} photos for sol {sol} from {rover.capitalize()} rover.")
-    for photo in photos[:5]:  # Print details of the first 5 photos
+    for photo in photos[:5]:  # Print details of the first 5 photos, changeable to first x photos or last x photos
         print("ID:", photo["id"])
         print("Camera:", photo["camera"]["full_name"])
         print("Image URL:", photo["img_src"])
