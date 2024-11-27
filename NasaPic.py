@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 #Key
-api_key = "rxftxUweV1AsYTBoh0RTQ4gIH7iOcAUQCy8XZgsc"
+api_key = "" #Can get personal key from "https://api.nasa.gov/" or use demo_key
 rover = "curiosity" #Changeable to Spirit or Opportunity rovers
 sol = 1000  #Martian sol (day), changeable to any day
 
